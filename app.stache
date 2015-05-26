@@ -2,25 +2,22 @@
 {{>intro}}
 <hr>
 <intro-app> {{! code goes below here }}
-    Name: <input type="text"><br>
-    Email: <input type="text"><br>
-    Phone: <input type="text"><br>
-    <input type="button" value="Add Contact"><br>
+    Name: <input type="text" can-value="name"><br>
+    Email: <input type="text" can-value="email"><br>
+    Phone: <input type="text" can-value="phone"><br>
+    <input type="button" can-click="addContact" value="Add Contact"><br>
+
     <table class="contact-table">
         <tr>
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
         </tr>
-        <tr>
-            <td>Bob</td>
-            <td>bob@example.net</td>
-            <td>123-456-7890</td>
-        </tr>
-        <tr>
-            <td>John</td>
-            <td>john@example.net</td>
-            <td>987-654-3210</td>
-        </tr>
-    </table>
+        {{#each contacts}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+            </tr>
+        {{/each}}
 </intro-app>
