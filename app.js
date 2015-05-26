@@ -19,6 +19,9 @@ steal(
                 addContact: function(context, el, ev) {
                     var contact = $.extend({name: this.name}, {email:this.email}, {phone:this.phone});
                     this.contacts.push(contact);
+                    this.attr('name', "");
+                    this.attr('email',"");
+                    this.attr('phone', "");
                 }
             },
             events: {

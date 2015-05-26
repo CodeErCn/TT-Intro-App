@@ -2,6 +2,7 @@
 {{>intro}}
 <hr>
 <intro-app> {{! code goes below here }}
+    <h1> {{message}} </h1>
     Name: <input type="text" can-value="name"><br>
     Email: <input type="text" can-value="email"><br>
     Phone: <input type="text" can-value="phone"><br>
